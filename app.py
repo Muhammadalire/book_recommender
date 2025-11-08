@@ -6,7 +6,7 @@ import os
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Enable Cross-Origin Resource Sharing for frontend communication
+CORS(app, resources={r"/api/*": {"origins": "*"}})  # Allow all origins for API routes
 
 # Global variables
 recommender = None

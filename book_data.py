@@ -9,7 +9,7 @@ def load_and_prepare_data():
     
     try:
         # Load the CSV file
-        df = pd.read_csv('data/indo_books.csv')
+        df = pd.read_csv('data/indo_books.csv', encoding='utf-8-sig')
         print(f"✅ Dataset loaded successfully with {len(df)} books")
         
     except FileNotFoundError:
